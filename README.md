@@ -77,7 +77,7 @@ For $q\ne0$, the following notation describes the implemented fluctuation functi
 $$
 F_{xy}^{(q)}(n)=\frac{1}{2M_n}\sum_{v=1}^{2M_n}
 \operatorname{sgn}(f_{xy}(v,n))
-\left(|f_{xy}(v,n)|+\varepsilon\right)^{q/2},
+\left[|f_{xy}(v,n)|+\varepsilon\right]^{q/2},
 $$
 
 $$
@@ -264,7 +264,7 @@ The separate logarithmic/geometric $q=0$ branch remains marked for audit in the 
 - **Negative orders:** when $q<0$ and $|\rho_q|>1$, the implementation replaces the coefficient by its reciprocal. Keep this convention in mind when comparing implementations.
 - **Matrix inversion:** `compute_qdmc()` attempts a direct inverse and falls back to a pseudoinverse when NumPy reports a singular matrix. It records the method used.
 - **Optional regularization:** the matrix becomes $R_X+\lambda I$. The default is $\lambda=0$; nonzero values change the computed observable.
-- **Raw and reported values:** `qDMC_raw` retains the quadratic form. `qDMC_reported` becomes `NaN` when the raw value falls outside $[0,1]`. `qDMC_clipped_for_plot` is a separate display-oriented field.
+- **Raw and reported values:** `qDMC_raw` retains the quadratic form. `qDMC_reported` becomes `NaN` when the raw value falls outside [0,1]. `qDMC_clipped_for_plot` is a separate display-oriented field.
 - **Validity diagnostics:** the result includes the minimum eigenvalue, determinant, condition number, positive-definiteness flag, and range flag. Interpret the coefficient using these diagnostics and the admissibility of the full target/explanatory correlation structure.
 - **Strength labels:** verbal categories in the summary and interpretation helpers are project-defined descriptive thresholds, rather than significance levels from the main paper.
 
