@@ -76,8 +76,8 @@ For $q\ne0$, the following notation describes the implemented fluctuation functi
 
 $$
 F_{xy}^{(q)}(n)=\frac{1}{2M_n}\sum_{v=1}^{2M_n}
-\operatorname{sgn}(f_{xy}(v,n))
-\left[|f_{xy}(v,n)|+\varepsilon\right]^{q/2},
+\mathrm{sgn}(f_{xy}(v,n))
+\left(|f_{xy}(v,n)|+\varepsilon\right)^{q/2},
 $$
 
 $$
